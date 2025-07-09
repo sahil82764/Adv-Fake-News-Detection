@@ -1,0 +1,6 @@
+2025-07-09 14:33:40,773 - INFO - Reading processed data from c:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\data\processed\processed_data.parquet...
+2025-07-09 14:33:45,040 - INFO - --- Data Splitting Complete ---
+2025-07-09 14:33:45,042 - INFO - Training set shape:   (38563, 3)
+2025-07-09 14:33:45,042 - INFO - Validation set shape: (4820, 3)
+2025-07-09 14:33:45,042 - INFO - Test set shape:       (4821, 3)
+2025-07-09 14:33:45,042 - INFO - Split data files saved to c:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\data\processed
