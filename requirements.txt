@@ -1,0 +1,25 @@
+# --- Core ML/DL Frameworks ---
+torch
+transformers
+accelerate # For FP16 training & other optimizations
+scikit-learn
+xgboost # For the XGBoost model
+
+# --- Data Handling ---
+pandas
+numpy
+pyarrow # For Parquet file format
+
+# --- API Framework ---
+fastapi
+uvicorn[standard]
+
+# --- NLP Utilities ---
+sentencepiece # Required by ALBERT's tokenizer
+nltk # For advanced text processing (stemming/lemmatization)
+
+# --- Utilities ---
+tqdm # Progress bars
+python-dotenv
+requests
+kaggle # For dataset downloads
