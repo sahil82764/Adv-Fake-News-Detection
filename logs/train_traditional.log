@@ -1,0 +1,16 @@
+2025-07-09 15:03:25,707 - INFO - --- Starting Traditional ML Model Training ---
+2025-07-09 15:03:25,708 - INFO - Loading training and validation data...
+2025-07-09 15:03:32,040 - INFO - Loaded 38563 training samples and 4820 validation samples.
+2025-07-09 15:03:32,040 - INFO - --- Training logistic_regression ---
+2025-07-09 15:04:00,680 - INFO - Evaluating logistic_regression on validation data...
+2025-07-09 15:04:02,256 - INFO - Validation Metrics for logistic_regression: {'accuracy': 0.9134854771784232, 'f1_score': 0.9135189597332354, 'precision': 0.9136281824236411, 'recall': 0.9134854771784232}
+2025-07-09 15:04:13,990 - INFO - Saved trained model pipeline to c:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\logistic_regression_model.joblib
+2025-07-09 15:04:13,990 - INFO - --- Training naive_bayes ---
+2025-07-09 15:04:38,860 - INFO - Evaluating naive_bayes on validation data...
+2025-07-09 15:04:39,985 - INFO - Validation Metrics for naive_bayes: {'accuracy': 0.8746887966804979, 'f1_score': 0.8747570006926126, 'precision': 0.8749847589186575, 'recall': 0.8746887966804979}
+2025-07-09 15:04:50,425 - INFO - Saved trained model pipeline to c:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\naive_bayes_model.joblib
+2025-07-09 15:04:50,425 - INFO - --- Training svm ---
+2025-07-09 15:05:16,008 - INFO - Evaluating svm on validation data...
+2025-07-09 15:05:17,400 - INFO - Validation Metrics for svm: {'accuracy': 0.9149377593360996, 'f1_score': 0.914942407275911, 'precision': 0.9149483197320933, 'recall': 0.9149377593360996}
+2025-07-09 15:05:27,932 - INFO - Saved trained model pipeline to c:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\svm_model.joblib
+2025-07-09 15:05:27,934 - INFO - --- All models trained. Results saved to c:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\traditional_ml_results.json ---
