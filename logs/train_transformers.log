@@ -1,0 +1,35 @@
+2025-07-09 19:45:50,142 - INFO - --- Starting Transformer Training for: distilbert (distilbert-base-uncased) ---
+2025-07-09 19:45:50,142 - INFO - Using device: cuda
+2025-07-09 19:45:50,142 - INFO - Loading tokenizer and model...
+2025-07-09 19:45:53,689 - INFO - Loading and preparing datasets...
+2025-07-09 19:45:57,744 - INFO - --- Epoch 1/3 ---
+2025-07-09 20:06:37,123 - INFO - Validation Metrics for Epoch 1: {'accuracy': 0.928838174273859, 'f1_score': 0.9288023004809947, 'precision': 0.9288539900230353, 'recall': 0.928838174273859}
+2025-07-09 20:06:37,123 - INFO - New best F1 score: 0.9288. Saving model...
+2025-07-09 20:06:38,162 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\distilbert_model
+2025-07-09 20:06:38,163 - INFO - --- Epoch 2/3 ---
+2025-07-09 20:27:32,281 - INFO - Validation Metrics for Epoch 2: {'accuracy': 0.9309128630705394, 'f1_score': 0.9309780626142712, 'precision': 0.9318290191692223, 'recall': 0.9309128630705394}
+2025-07-09 20:27:32,282 - INFO - New best F1 score: 0.9310. Saving model...
+2025-07-09 20:27:32,798 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\distilbert_model
+2025-07-09 20:27:32,799 - INFO - --- Epoch 3/3 ---
+2025-07-09 20:48:25,525 - INFO - Validation Metrics for Epoch 3: {'accuracy': 0.9300829875518672, 'f1_score': 0.93000991085116, 'precision': 0.9302570360617872, 'recall': 0.9300829875518672}
+2025-07-09 20:48:25,531 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\transformer_distilbert_results.json
+2025-07-09 20:48:25,531 - INFO - --- Training for distilbert complete. ---
+2025-07-09 20:48:25,984 - INFO - --- Starting Transformer Training for: albert (albert-base-v2) ---
+2025-07-09 20:48:25,984 - INFO - Using device: cuda
+2025-07-09 20:48:25,984 - INFO - Loading tokenizer and model...
+2025-07-09 20:48:28,229 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-07-09 20:48:30,431 - INFO - Loading and preparing datasets...
+2025-07-09 20:48:31,341 - INFO - --- Epoch 1/3 ---
+2025-07-09 21:33:02,985 - INFO - Validation Metrics for Epoch 1: {'accuracy': 0.9224066390041494, 'f1_score': 0.9222363278310249, 'precision': 0.9231470136068756, 'recall': 0.9224066390041494}
+2025-07-09 21:33:02,991 - INFO - New best F1 score: 0.9222. Saving model...
+2025-07-09 21:33:03,150 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\albert_model
+2025-07-09 21:33:03,150 - INFO - --- Epoch 2/3 ---
+2025-07-09 22:14:04,489 - INFO - Validation Metrics for Epoch 2: {'accuracy': 0.9244813278008299, 'f1_score': 0.9245459220657295, 'precision': 0.9251724493589021, 'recall': 0.9244813278008299}
+2025-07-09 22:14:04,489 - INFO - New best F1 score: 0.9245. Saving model...
+2025-07-09 22:14:04,558 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\albert_model
+2025-07-09 22:14:04,558 - INFO - --- Epoch 3/3 ---
+2025-07-09 22:55:08,722 - INFO - Validation Metrics for Epoch 3: {'accuracy': 0.9311203319502075, 'f1_score': 0.9310626369915325, 'precision': 0.9312231697945098, 'recall': 0.9311203319502075}
+2025-07-09 22:55:08,723 - INFO - New best F1 score: 0.9311. Saving model...
+2025-07-09 22:55:08,799 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\albert_model
+2025-07-09 22:55:08,805 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\transformer_albert_results.json
+2025-07-09 22:55:08,805 - INFO - --- Training for albert complete. ---
