@@ -51,3 +51,8 @@ config/
 
 # Kaggle API key
 kaggle.json
+
+# Documents
+*.pdf
+*.doc
+*.docx

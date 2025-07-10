@@ -1,35 +1,36 @@
-2025-07-09 19:45:50,142 - INFO - --- Starting Transformer Training for: distilbert (distilbert-base-uncased) ---
-2025-07-09 19:45:50,142 - INFO - Using device: cuda
-2025-07-09 19:45:50,142 - INFO - Loading tokenizer and model...
-2025-07-09 19:45:53,689 - INFO - Loading and preparing datasets...
-2025-07-09 19:45:57,744 - INFO - --- Epoch 1/3 ---
-2025-07-09 20:06:37,123 - INFO - Validation Metrics for Epoch 1: {'accuracy': 0.928838174273859, 'f1_score': 0.9288023004809947, 'precision': 0.9288539900230353, 'recall': 0.928838174273859}
-2025-07-09 20:06:37,123 - INFO - New best F1 score: 0.9288. Saving model...
-2025-07-09 20:06:38,162 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\distilbert_model
-2025-07-09 20:06:38,163 - INFO - --- Epoch 2/3 ---
-2025-07-09 20:27:32,281 - INFO - Validation Metrics for Epoch 2: {'accuracy': 0.9309128630705394, 'f1_score': 0.9309780626142712, 'precision': 0.9318290191692223, 'recall': 0.9309128630705394}
-2025-07-09 20:27:32,282 - INFO - New best F1 score: 0.9310. Saving model...
-2025-07-09 20:27:32,798 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\distilbert_model
-2025-07-09 20:27:32,799 - INFO - --- Epoch 3/3 ---
-2025-07-09 20:48:25,525 - INFO - Validation Metrics for Epoch 3: {'accuracy': 0.9300829875518672, 'f1_score': 0.93000991085116, 'precision': 0.9302570360617872, 'recall': 0.9300829875518672}
-2025-07-09 20:48:25,531 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\transformer_distilbert_results.json
-2025-07-09 20:48:25,531 - INFO - --- Training for distilbert complete. ---
-2025-07-09 20:48:25,984 - INFO - --- Starting Transformer Training for: albert (albert-base-v2) ---
-2025-07-09 20:48:25,984 - INFO - Using device: cuda
-2025-07-09 20:48:25,984 - INFO - Loading tokenizer and model...
-2025-07-09 20:48:28,229 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
-2025-07-09 20:48:30,431 - INFO - Loading and preparing datasets...
-2025-07-09 20:48:31,341 - INFO - --- Epoch 1/3 ---
-2025-07-09 21:33:02,985 - INFO - Validation Metrics for Epoch 1: {'accuracy': 0.9224066390041494, 'f1_score': 0.9222363278310249, 'precision': 0.9231470136068756, 'recall': 0.9224066390041494}
-2025-07-09 21:33:02,991 - INFO - New best F1 score: 0.9222. Saving model...
-2025-07-09 21:33:03,150 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\albert_model
-2025-07-09 21:33:03,150 - INFO - --- Epoch 2/3 ---
-2025-07-09 22:14:04,489 - INFO - Validation Metrics for Epoch 2: {'accuracy': 0.9244813278008299, 'f1_score': 0.9245459220657295, 'precision': 0.9251724493589021, 'recall': 0.9244813278008299}
-2025-07-09 22:14:04,489 - INFO - New best F1 score: 0.9245. Saving model...
-2025-07-09 22:14:04,558 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\albert_model
-2025-07-09 22:14:04,558 - INFO - --- Epoch 3/3 ---
-2025-07-09 22:55:08,722 - INFO - Validation Metrics for Epoch 3: {'accuracy': 0.9311203319502075, 'f1_score': 0.9310626369915325, 'precision': 0.9312231697945098, 'recall': 0.9311203319502075}
-2025-07-09 22:55:08,723 - INFO - New best F1 score: 0.9311. Saving model...
-2025-07-09 22:55:08,799 - INFO - Model saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\models\albert_model
-2025-07-09 22:55:08,805 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\transformer_albert_results.json
-2025-07-09 22:55:08,805 - INFO - --- Training for albert complete. ---
+2025-07-10 03:21:54,338 - INFO - --- Starting Transformer Training for: distilbert (distilbert-base-uncased) ---
+2025-07-10 03:21:54,339 - INFO - Using device: cuda
+2025-07-10 03:21:57,840 - INFO - --- Epoch 1/3 ---
+2025-07-10 03:39:47,752 - INFO - Average Training Loss: 0.1720
+2025-07-10 03:39:47,752 - INFO - Average Validation Loss: 0.1317
+2025-07-10 03:39:47,753 - INFO - Validation Metrics (Epoch 1): 0.9384 F1-Score
+2025-07-10 03:39:47,754 - INFO - New best F1 score: 0.9384. Saving model...
+2025-07-10 03:39:48,370 - INFO - --- Epoch 2/3 ---
+2025-07-10 03:57:32,741 - INFO - Average Training Loss: 0.1163
+2025-07-10 03:57:32,742 - INFO - Average Validation Loss: 0.1391
+2025-07-10 03:57:32,742 - INFO - Validation Metrics (Epoch 2): 0.9359 F1-Score
+2025-07-10 03:57:32,742 - INFO - --- Epoch 3/3 ---
+2025-07-10 04:15:32,839 - INFO - Average Training Loss: 0.0841
+2025-07-10 04:15:32,840 - INFO - Average Validation Loss: 0.2094
+2025-07-10 04:15:32,840 - INFO - Validation Metrics (Epoch 3): 0.9314 F1-Score
+2025-07-10 04:15:32,843 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\transformer_distilbert_training_stats.json
+2025-07-10 04:15:32,844 - INFO - --- Training for distilbert complete. ---
+2025-07-10 04:15:32,882 - INFO - --- Starting Transformer Training for: albert (albert-base-v2) ---
+2025-07-10 04:15:32,882 - INFO - Using device: cuda
+2025-07-10 04:15:34,198 - INFO - --- Epoch 1/3 ---
+2025-07-10 04:56:46,242 - INFO - Average Training Loss: 0.1706
+2025-07-10 04:56:46,242 - INFO - Average Validation Loss: 0.1386
+2025-07-10 04:56:46,242 - INFO - Validation Metrics (Epoch 1): 0.9250 F1-Score
+2025-07-10 04:56:46,243 - INFO - New best F1 score: 0.9250. Saving model...
+2025-07-10 04:56:46,356 - INFO - --- Epoch 2/3 ---
+2025-07-10 05:37:47,106 - INFO - Average Training Loss: 0.1406
+2025-07-10 05:37:47,107 - INFO - Average Validation Loss: 0.1490
+2025-07-10 05:37:47,107 - INFO - Validation Metrics (Epoch 2): 0.9327 F1-Score
+2025-07-10 05:37:47,107 - INFO - New best F1 score: 0.9327. Saving model...
+2025-07-10 05:37:47,186 - INFO - --- Epoch 3/3 ---
+2025-07-10 06:18:57,510 - INFO - Average Training Loss: 0.1264
+2025-07-10 06:18:57,510 - INFO - Average Validation Loss: 0.1438
+2025-07-10 06:18:57,510 - INFO - Validation Metrics (Epoch 3): 0.9366 F1-Score
+2025-07-10 06:18:57,511 - INFO - New best F1 score: 0.9366. Saving model...
+2025-07-10 06:18:57,582 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection\results\transformer_albert_training_stats.json
+2025-07-10 06:18:57,582 - INFO - --- Training for albert complete. ---
