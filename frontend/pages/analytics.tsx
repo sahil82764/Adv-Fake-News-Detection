@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useState as useLocalState } from 'react';
 
 function ConfusionMatrix({ matrix, labels }: { matrix: number[][], labels: string[] }) {
   return (
@@ -30,7 +29,7 @@ export default function Analytics() {
   const [metrics, setMetrics] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [expanded, setExpanded] = useLocalState<string | null>(null);
+  const [expanded, setExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchMetrics() {

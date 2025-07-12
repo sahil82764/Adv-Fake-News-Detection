@@ -3,8 +3,10 @@ from typing import List
 from pydantic import BaseModel
 from backend.models.loader import load_model
 from ml import config
-from ml.utils import compute_metrics
 import torch
+from ml.config import LABEL_MAP
+
+# LABEL_MAP = {0: "Fake", 1: "Real"}
 
 router = APIRouter()
 
@@ -43,7 +45,7 @@ def compare_models(request: CompareRequest):
                 probs = torch.softmax(outputs.logits, dim=1)
                 pred = torch.argmax(probs, dim=1).item()
                 prob = probs[0, pred].item()
-            results[model_name] = {"prediction": int(pred), "probability": float(prob) if prob is not None else None}
+            results[model_name] = {"prediction": LABEL_MAP[pred], "probability": float(prob) if prob is not None else None}
         else:
             pipeline = model_obj
             pred = pipeline.predict([text])[0]
@@ -52,7 +54,7 @@ def compare_models(request: CompareRequest):
             else:
                 prob = None
             # Convert numpy types to Python types
-            results[model_name] = {"prediction": int(pred), "probability": float(prob) if prob is not None else None}
+            results[model_name] = {"prediction": LABEL_MAP[pred], "probability": float(prob) if prob is not None else None}
     return results
 
 @router.get("/performance")

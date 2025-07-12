@@ -12,6 +12,8 @@ MODELS_DIR = os.path.join(PROJECT_ROOT, 'models')
 RESULTS_DIR = os.path.join(PROJECT_ROOT, 'results')
 LOGS_DIR = os.path.join(PROJECT_ROOT, 'logs')
 
+LABEL_MAP = {0: "Fake", 1: "Real"}
+
 # --- Transformer Model Configuration ---
 # This dictionary holds settings for models like DistilBERT and ALBERT.
 # These parameters are optimized for a GPU with limited VRAM, as per the project plan.

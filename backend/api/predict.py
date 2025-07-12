@@ -7,6 +7,7 @@ from ml import config
 import torch
 import logging
 import uuid
+from ml.config import LABEL_MAP
 
 router = APIRouter()
 
@@ -21,7 +22,7 @@ logging.basicConfig(
     ]
 )
 
-LABEL_MAP = {0: "Fake", 1: "Real"}
+# LABEL_MAP = {0: "Fake", 1: "Real"}
 
 @router.post("/single", response_model=PredictionResponse)
 def predict_single(request: SinglePredictionRequest):
