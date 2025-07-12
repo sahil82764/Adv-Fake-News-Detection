@@ -1,74 +1,111 @@
 # Advanced Fake News Detection System
 
-This project is a comprehensive system for detecting fake news using a variety of machine learning and deep learning models. It allows for the training, evaluation, and comparison of multiple architectures, from traditional ML baselines to advanced transformer-based hybrid models.
+## Overview
+This project is an academic implementation of a robust Fake News Detection system using both traditional machine learning and modern transformer-based models. It features a FastAPI backend for model inference and analytics, and a Next.js frontend for interactive exploration, comparison, and visualization of model performance.
 
-## Project Overview
-
-The core of this project is a comparative framework designed to analyze the effectiveness of different NLP techniques for misinformation detection under specific hardware constraints (8GB RAM, 2GB GPU). The system is served via a FastAPI backend and includes a multi-feature Next.js frontend for interaction and analysis.
-
-### Key Features:
-
-- **Multi-Model Architecture:** Implements and compares:
-    - [cite_start]**Transformer Models:** DistilBERT and ALBERT [cite: 230]
-    - [cite_start]**Hybrid Models:** Transformer + BiGRU/CNN layers [cite: 234]
-    - [cite_start]**Traditional ML:** Naive Bayes, SVM, Logistic Regression [cite: 237]
-    - [cite_start]**Deep Learning:** Standalone LSTM and XGBoost models [cite: 241]
-- [cite_start]**Advanced Data Pipeline:** Includes optional data augmentation with GPT-2, advanced text preprocessing, and memory-efficient data loaders[cite: 212, 222, 223].
-- [cite_start]**Comprehensive Evaluation:** Provides detailed analysis of model performance (F1-score, ROC-AUC), inference speed, and memory usage[cite: 260, 265].
-- [cite_start]**Interactive Frontend:** A web interface built with Next.js for single-instance prediction, side-by-side model comparison, and performance analytics[cite: 292].
-- [cite_start]**Zero-Cost Deployment:** Designed to be deployed entirely on free-tier services like Vercel and Railway[cite: 15].
+## Features
+- **Multiple Model Support:**
+  - Traditional ML: Logistic Regression, Naive Bayes, SVM
+  - Transformers: DistilBERT, ALBERT
+- **Interactive Web UI:**
+  - Single and batch prediction
+  - Model comparison and analytics
+  - Confusion matrix visualization
+  - Educational help page
+- **REST API:**
+  - Predict, compare, and benchmark models via HTTP endpoints
+- **Extensible:**
+  - Easily add new models or metrics
 
 ## Project Structure
+```
+Adv-Fake-News-Detection/
+├── backend/           # FastAPI backend (API, model loading, inference)
+├── frontend/          # Next.js frontend (UI, analytics, help)
+├── ml/                # ML utilities, config, preprocessing
+├── models/            # Saved model weights and tokenizers
+├── data/              # Raw and processed datasets
+├── results/           # Model performance metrics and logs
+├── notebooks/         # Jupyter notebooks for exploration and benchmarking
+├── requirements.txt   # Python dependencies
+├── pyproject.toml     # Python project config
+└── README.md          # Project documentation
+```
 
-The project is organized into a modular structure to separate concerns for machine learning, backend, and frontend development. See the `docs/` directory for detailed architecture diagrams.
+## Setup Instructions
 
-## Getting Started
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-org-or-username>/Adv-Fake-News-Detection.git
+cd Adv-Fake-News-Detection
+```
 
-### Prerequisites
+### 2. Backend Setup (FastAPI)
+- Install Python 3.8+
+- Create a virtual environment and activate it:
+  ```bash
+  python -m venv .venv
+  source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+  ```
+- Install dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+- Run the backend locally:
+  ```bash
+  uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+  ```
+- API docs available at: [http://localhost:8000/docs](http://localhost:8000/docs)
 
-- Python 3.8+
-- Node.js 18.0+
-- `pip` and `virtualenv`
-- `npm` or `yarn`
+### 3. Frontend Setup (Next.js)
+- Go to the frontend directory:
+  ```bash
+  cd frontend
+  ```
+- Install dependencies:
+  ```bash
+  npm install
+  ```
+- Run the frontend locally:
+  ```bash
+  npm run dev
+  ```
+- Access the UI at: [http://localhost:3000](http://localhost:3000)
 
-### Installation & Setup
+### 4. Deployment
+- **Backend:** Deploy FastAPI to Render, Railway, or any cloud platform. Set the `PYTHONPATH` to `.` and ensure all `__init__.py` files exist in backend folders.
+- **Frontend:** Deploy Next.js to Vercel. Set the `BACKEND_URL` environment variable in Vercel to your deployed backend URL.
 
-1.  **Clone the repository and create the virtual environment.**
-2.  **Install PyTorch with CUDA support** (see official PyTorch website for instructions).
-3.  **Install Python and Node.js dependencies** using `requirements.txt` and `package.json`.
-4.  **Download Datasets:** Place the Kaggle and LIAR datasets into the `data/raw/` directory as specified in the documentation.
+## API Endpoints
+- `POST /api/predict/single` — Predict label for a single news article
+- `POST /api/predict/batch` — Predict labels for multiple articles
+- `POST /api/compare/models` — Compare predictions from multiple models
+- `GET /api/compare/performance` — Get model performance metrics
+- `GET /api/health` — Health check
 
-*For detailed instructions, please refer to the `docs/TRAINING.md` and `docs/DEPLOYMENT.md` files.*
+See `/docs` on the backend for full OpenAPI documentation.
 
-## Phase 4: Backend API & Testing
+## Data
+- Uses Kaggle Fake News and LIAR datasets (see `data/` folder)
+- Preprocessing scripts in `ml/preprocess.py` and `scripts.py/prepare_data.py`
 
-- **Production-ready FastAPI backend** with robust error handling and logging.
-- **Multi-model endpoints** for single, batch, async batch, and ensemble predictions.
-- **Default endpoint** `/api/predict/default` uses the best-performing DistilBERT model.
-- **Comprehensive test suite** in `tests/test_predict.py` (run with `pytest`).
-- **Async batch jobs** supported via `/api/predict/async_batch` and `/api/predict/async_batch_result/{task_id}`.
+## Notebooks
+- Data exploration, model training, and benchmarking in `notebooks/`
 
-### Running Backend Tests
+## Educational Content
+- Help page in the frontend explains model types and evaluation metrics
+- Tooltips and popups throughout the UI
 
-1. Activate your Python environment.
-2. From the project root, run:
-   ```
-   pytest
-   ```
-   or (if needed):
-   ```
-   set PYTHONPATH=.
-   pytest
-   ```
-   All tests in `tests/` will be discovered and run automatically.
+## Acknowledgements
+- HuggingFace Transformers
+- Scikit-learn
+- FastAPI, Uvicorn
+- Next.js, React
+- Kaggle and LIAR datasets
 
-### API Endpoints (Phase 4)
-- `POST /api/predict/default` — Predict with DistilBERT (best model)
-- `POST /api/predict/single` — Predict with any supported model
-- `POST /api/predict/batch` — Batch prediction
-- `POST /api/predict/async_batch` — Async batch prediction (returns task_id)
-- `GET /api/predict/async_batch_result/{task_id}` — Get async batch result
-- Robust error messages and logging to `backend_api.log`
+## License
+This project is for academic and educational purposes only. Please cite appropriately if used in research or coursework.
 
 ---
-*This project was developed by Sahil Khan.*
+
+For questions or suggestions, please open an issue or pull request on GitHub.
