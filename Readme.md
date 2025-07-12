@@ -40,5 +40,35 @@ The project is organized into a modular structure to separate concerns for machi
 
 *For detailed instructions, please refer to the `docs/TRAINING.md` and `docs/DEPLOYMENT.md` files.*
 
+## Phase 4: Backend API & Testing
+
+- **Production-ready FastAPI backend** with robust error handling and logging.
+- **Multi-model endpoints** for single, batch, async batch, and ensemble predictions.
+- **Default endpoint** `/api/predict/default` uses the best-performing DistilBERT model.
+- **Comprehensive test suite** in `tests/test_predict.py` (run with `pytest`).
+- **Async batch jobs** supported via `/api/predict/async_batch` and `/api/predict/async_batch_result/{task_id}`.
+
+### Running Backend Tests
+
+1. Activate your Python environment.
+2. From the project root, run:
+   ```
+   pytest
+   ```
+   or (if needed):
+   ```
+   set PYTHONPATH=.
+   pytest
+   ```
+   All tests in `tests/` will be discovered and run automatically.
+
+### API Endpoints (Phase 4)
+- `POST /api/predict/default` — Predict with DistilBERT (best model)
+- `POST /api/predict/single` — Predict with any supported model
+- `POST /api/predict/batch` — Batch prediction
+- `POST /api/predict/async_batch` — Async batch prediction (returns task_id)
+- `GET /api/predict/async_batch_result/{task_id}` — Get async batch result
+- Robust error messages and logging to `backend_api.log`
+
 ---
 *This project was developed by Sahil Khan.*

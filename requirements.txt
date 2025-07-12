@@ -25,3 +25,7 @@ python-dotenv
 requests
 kaggle # For dataset downloads
 psutil # For system resource monitoring (memory/CPU)
+
+
+
+python-multipart
