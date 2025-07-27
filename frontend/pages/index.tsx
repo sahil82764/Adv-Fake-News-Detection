@@ -504,7 +504,7 @@ export default function Home() {
         <div className="header">
           <div className="logo">
             <div className="logo-icon">🔍</div>
-            <div className="logo-text">TruthLens</div>
+            <div className="logo-text">Fake News Detection System</div>
           </div>
           <div className="tagline">AI-Powered Fact Verification</div>
           <div className="subtitle">Analyze text for misinformation and verify credibility</div>
