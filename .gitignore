@@ -41,12 +41,15 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Data, Models, Results (as per project plan)
+
+# Data, Results (as per project plan)
 data/
-models/
 results/
 training_logs/
 visualizations/
+
+# Only ignore root-level models directory, not backend/models
+/models/
 
 # Config
 config/
