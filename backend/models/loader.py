@@ -18,7 +18,8 @@ def load_model(model_name: str):
     if model_name in MODEL_CACHE:
         return MODEL_CACHE[model_name]
     if model_name in TRANSFORMER_MODELS:
-        model_path = os.path.join(config.MODELS_DIR, f'{model_name}_model')
+        # Construct an absolute path to the model directory
+        model_path = os.path.abspath(os.path.join(config.MODELS_DIR, f'{model_name}_model'))
         tokenizer = AutoTokenizer.from_pretrained(model_path)
         model = AutoModelForSequenceClassification.from_pretrained(model_path)
         model.to(config.DEVICE)
