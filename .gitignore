@@ -49,7 +49,7 @@ training_logs/
 visualizations/
 
 # Only ignore root-level models directory, not backend/models
-/models/
+# /models/
 
 # Config
 config/
