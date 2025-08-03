@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import Link from 'next/link';
 
 const MAX_CHARS = 2000;
 
@@ -24,7 +24,7 @@ export default function Home() {
     setError(null);
     
     try {
-      const res = await fetch('/api/predict/default', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/predict/default`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text }),
@@ -450,7 +450,7 @@ export default function Home() {
 
       <div className="container">
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-          <a href="/compare" style={{
+          <Link href="/compare" style={{
             color: '#7c3aed',
             fontWeight: 600,
             textDecoration: 'none',
@@ -460,13 +460,10 @@ export default function Home() {
             borderRadius: 8,
             transition: 'background 0.2s',
             marginRight: 0
-          }}
-          onMouseOver={e => (e.currentTarget.style.background = 'rgba(124,58,237,0.18)')}
-          onMouseOut={e => (e.currentTarget.style.background = 'rgba(124,58,237,0.08)')}
-          >
+          }}>
             Compare Models
-          </a>
-          <a href="/analytics" style={{
+          </Link>
+          <Link href="/analytics" style={{
             color: '#4f46e5',
             fontWeight: 600,
             textDecoration: 'none',
@@ -477,13 +474,10 @@ export default function Home() {
             transition: 'background 0.2s',
             marginLeft: 0,
             marginRight: 0
-          }}
-          onMouseOver={e => (e.currentTarget.style.background = 'rgba(79,70,229,0.18)')}
-          onMouseOut={e => (e.currentTarget.style.background = 'rgba(79,70,229,0.08)')}
-          >
+          }}>
             Analytics
-          </a>
-          <a href="/help" style={{
+          </Link>
+          <Link href="/help" style={{
             color: '#10b981',
             fontWeight: 600,
             textDecoration: 'none',
@@ -493,12 +487,9 @@ export default function Home() {
             borderRadius: 8,
             transition: 'background 0.2s',
             marginLeft: 0
-          }}
-          onMouseOver={e => (e.currentTarget.style.background = 'rgba(16,185,129,0.18)')}
-          onMouseOut={e => (e.currentTarget.style.background = 'rgba(16,185,129,0.08)')}
-          >
+          }}>
             Help
-          </a>
+          </Link>
         </div>
 
         <div className="header">

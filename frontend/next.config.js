@@ -3,6 +3,8 @@ const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 const nextConfig = {
   output: 'export',
+  assetPrefix: '/Adv-Fake-News-Detection-main/',
+  basePath: '/Adv-Fake-News-Detection-main',
   async rewrites() {
     return [
       {
