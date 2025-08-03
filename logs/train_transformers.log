@@ -1,0 +1,37 @@
+2025-08-03 00:57:55,872 - INFO - --- Starting Transformer Training for: distilbert (distilbert-base-uncased) ---
+2025-08-03 00:57:55,873 - INFO - Using device: cuda
+2025-08-03 00:58:00,637 - INFO - --- Epoch 1/3 ---
+2025-08-03 01:15:03,069 - INFO - Average Training Loss: 0.1727
+2025-08-03 01:15:03,073 - INFO - Average Validation Loss: 0.1409
+2025-08-03 01:15:03,073 - INFO - Validation Metrics (Epoch 1): 0.9339 F1-Score
+2025-08-03 01:15:03,073 - INFO - New best F1 score: 0.9339. Saving model...
+2025-08-03 01:15:03,579 - INFO - --- Epoch 2/3 ---
+2025-08-03 01:31:47,463 - INFO - Average Training Loss: 0.1188
+2025-08-03 01:31:47,464 - INFO - Average Validation Loss: 0.1403
+2025-08-03 01:31:47,464 - INFO - Validation Metrics (Epoch 2): 0.9371 F1-Score
+2025-08-03 01:31:47,464 - INFO - New best F1 score: 0.9371. Saving model...
+2025-08-03 01:31:47,864 - INFO - --- Epoch 3/3 ---
+2025-08-03 01:48:36,771 - INFO - Average Training Loss: 0.0865
+2025-08-03 01:48:36,771 - INFO - Average Validation Loss: 0.1920
+2025-08-03 01:48:36,771 - INFO - Validation Metrics (Epoch 3): 0.9352 F1-Score
+2025-08-03 01:48:36,789 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\results\transformer_distilbert_training_stats.json
+2025-08-03 01:48:36,791 - INFO - --- Training for distilbert complete. ---
+2025-08-03 01:48:37,041 - INFO - --- Starting Transformer Training for: albert (albert-base-v2) ---
+2025-08-03 01:48:37,042 - INFO - Using device: cuda
+2025-08-03 01:48:39,791 - INFO - --- Epoch 1/3 ---
+2025-08-03 02:30:34,138 - INFO - Average Training Loss: 0.1729
+2025-08-03 02:30:34,139 - INFO - Average Validation Loss: 0.1622
+2025-08-03 02:30:34,139 - INFO - Validation Metrics (Epoch 1): 0.9311 F1-Score
+2025-08-03 02:30:34,139 - INFO - New best F1 score: 0.9311. Saving model...
+2025-08-03 02:30:34,233 - INFO - --- Epoch 2/3 ---
+2025-08-03 03:14:22,303 - INFO - Average Training Loss: 0.1377
+2025-08-03 03:14:22,304 - INFO - Average Validation Loss: 0.1267
+2025-08-03 03:14:22,304 - INFO - Validation Metrics (Epoch 2): 0.9359 F1-Score
+2025-08-03 03:14:22,305 - INFO - New best F1 score: 0.9359. Saving model...
+2025-08-03 03:14:22,414 - INFO - --- Epoch 3/3 ---
+2025-08-03 03:59:01,637 - INFO - Average Training Loss: 0.1253
+2025-08-03 03:59:01,638 - INFO - Average Validation Loss: 0.1393
+2025-08-03 03:59:01,638 - INFO - Validation Metrics (Epoch 3): 0.9374 F1-Score
+2025-08-03 03:59:01,639 - INFO - New best F1 score: 0.9374. Saving model...
+2025-08-03 03:59:01,728 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\results\transformer_albert_training_stats.json
+2025-08-03 03:59:01,729 - INFO - --- Training for albert complete. ---

@@ -1,0 +1,14 @@
+2025-08-03 00:41:11,641 - INFO - --- Starting Enhanced Data Harmonization ---
+2025-08-03 00:41:11,642 - INFO - Processing Kaggle dataset...
+2025-08-03 00:41:12,887 - INFO - Processing LIAR dataset...
+2025-08-03 00:41:12,941 - INFO - Combined dataset shape before cleaning: (54015, 2)
+2025-08-03 00:41:13,031 - INFO - Shape after basic cleaning and deduplication: (48204, 2)
+2025-08-03 00:41:13,031 - INFO - Creating raw text version for Transformers...
+2025-08-03 00:41:22,443 - INFO - Creating processed text version for traditional ML models (with stemming)...
+2025-08-03 00:44:09,308 - INFO - Final dataset shape: (48204, 3)
+2025-08-03 00:44:09,311 - INFO - Label distribution:
+label
+1    0.533151
+0    0.466849
+Name: proportion, dtype: float64
+2025-08-03 00:44:09,311 - INFO - Successfully saved processed data to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\data\processed\processed_data.parquet

@@ -1,0 +1,17 @@
+2025-08-03 00:47:14,977 - INFO - --- Starting Traditional ML Model Training ---
+2025-08-03 00:47:14,977 - INFO - Loading training and validation data...
+2025-08-03 00:47:15,685 - INFO - Loaded 38563 training samples and 4820 validation samples.
+2025-08-03 00:47:15,685 - INFO - --- Training logistic_regression ---
+2025-08-03 00:47:35,270 - INFO - Evaluating logistic_regression on validation data...
+2025-08-03 00:47:36,248 - INFO - Validation Metrics for logistic_regression: {'accuracy': 0.912448132780083, 'f1_score': 0.9174168297455969, 'precision': 0.9120622568093385, 'recall': 0.9228346456692913, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[2054, 226], [196, 2344]]}}
+2025-08-03 00:47:36,392 - INFO - Saved trained model pipeline to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\models\logistic_regression_model.joblib
+2025-08-03 00:47:36,392 - INFO - --- Training naive_bayes ---
+2025-08-03 00:47:55,024 - INFO - Evaluating naive_bayes on validation data...
+2025-08-03 00:47:55,955 - INFO - Validation Metrics for naive_bayes: {'accuracy': 0.8742738589211618, 'f1_score': 0.8810365135453475, 'precision': 0.8731517509727627, 'recall': 0.8890649762282092, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[1970, 326], [280, 2244]]}}
+2025-08-03 00:47:56,091 - INFO - Saved trained model pipeline to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\models\naive_bayes_model.joblib
+2025-08-03 00:47:56,091 - INFO - --- Training svm ---
+2025-08-03 00:48:15,721 - INFO - Evaluating svm on validation data...
+2025-08-03 00:48:16,836 - INFO - Validation Metrics for svm: {'accuracy': 0.9143153526970954, 'f1_score': 0.9195715676728335, 'precision': 0.9186770428015564, 'recall': 0.92046783625731, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[2046, 209], [204, 2361]]}}
+2025-08-03 00:48:16,990 - INFO - Saved trained model pipeline to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\models\svm_model.joblib
+2025-08-03 00:48:16,991 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\results\traditional_ml_results.json
+2025-08-03 00:48:16,991 - INFO - --- All models trained. ---

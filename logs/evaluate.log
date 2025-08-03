@@ -1,0 +1,23 @@
+2025-08-03 04:15:22,893 - INFO - ====== Starting Full Model Evaluation ======
+2025-08-03 04:15:22,893 - INFO - --- Evaluating logistic_regression (traditional) ---
+2025-08-03 04:15:23,239 - INFO - Model loaded. Memory usage increased by: 8.53 MB
+2025-08-03 04:15:24,060 - INFO - Inference complete in 0.82s. Average time per sample: 0.1705 ms
+2025-08-03 04:15:24,068 - INFO - Test Set Metrics: {'accuracy': 0.9064509437875959, 'f1_score': 0.9114122962089962, 'precision': 0.9027237354085603, 'recall': 0.9202697342324474, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[2050, 250], [201, 2320]]}}
+2025-08-03 04:15:24,069 - INFO - --- Evaluating naive_bayes (traditional) ---
+2025-08-03 04:15:24,215 - INFO - Model loaded. Memory usage increased by: 0.90 MB
+2025-08-03 04:15:25,050 - INFO - Inference complete in 0.83s. Average time per sample: 0.1730 ms
+2025-08-03 04:15:25,056 - INFO - Test Set Metrics: {'accuracy': 0.8755444928438083, 'f1_score': 0.8816568047337278, 'precision': 0.8696498054474708, 'recall': 0.894, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[1986, 335], [265, 2235]]}}
+2025-08-03 04:15:25,058 - INFO - --- Evaluating svm (traditional) ---
+2025-08-03 04:15:25,198 - INFO - Model loaded. Memory usage increased by: 0.30 MB
+2025-08-03 04:15:25,976 - INFO - Inference complete in 0.78s. Average time per sample: 0.1613 ms
+2025-08-03 04:15:25,981 - INFO - Test Set Metrics: {'accuracy': 0.9093549056212404, 'f1_score': 0.914464670189861, 'precision': 0.9089494163424124, 'recall': 0.9200472627018511, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[2048, 234], [203, 2336]]}}
+2025-08-03 04:15:25,983 - INFO - --- Evaluating distilbert (transformer) ---
+2025-08-03 04:15:28,403 - INFO - Model loaded. Memory usage increased by: 101.80 MB
+2025-08-03 04:16:01,645 - INFO - Inference complete in 33.24s. Average time per sample: 6.8951 ms
+2025-08-03 04:16:01,651 - INFO - Test Set Metrics: {'accuracy': 0.9242895664799834, 'f1_score': 0.9301167911162167, 'precision': 0.945136186770428, 'recall': 0.9155672823218998, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[2027, 141], [224, 2429]]}}
+2025-08-03 04:16:01,657 - INFO - --- Evaluating albert (transformer) ---
+2025-08-03 04:16:01,844 - INFO - Model loaded. Memory usage increased by: 19.86 MB
+2025-08-03 04:17:39,137 - INFO - Inference complete in 97.29s. Average time per sample: 20.1811 ms
+2025-08-03 04:17:39,144 - INFO - Test Set Metrics: {'accuracy': 0.9288529350757104, 'f1_score': 0.9341018251681076, 'precision': 0.9459143968871595, 'recall': 0.9225806451612903, 'confusion_matrix': {'labels': ['Fake (0)', 'Real (1)'], 'matrix': [[2047, 139], [204, 2431]]}}
+2025-08-03 04:17:39,199 - INFO - Results saved to C:\Users\Sahil Khan\Desktop\Adv-Fake-News-Detection-main\Adv-Fake-News-Detection-main\results\model_comparison.json
+2025-08-03 04:17:39,202 - INFO - ====== Evaluation Complete. Report saved to results/model_comparison.json ======

@@ -1,0 +1,31 @@
+# --- Core ML/DL Frameworks ---
+torch
+transformers
+networkx<3.2 # Pinned to support Python 3.8, as newer versions require 3.9+
+accelerate # For FP16 training & other optimizations
+scikit-learn
+xgboost # For the XGBoost model
+
+# --- Data Handling ---
+pandas
+numpy
+pyarrow # For Parquet file format
+
+# --- API Framework ---
+fastapi
+uvicorn[standard]
+
+# --- NLP Utilities ---
+sentencepiece # Required by ALBERT's tokenizer
+nltk # For advanced text processing (stemming/lemmatization)
+
+# --- Utilities ---
+tqdm # Progress bars
+python-dotenv
+requests
+kaggle # For dataset downloads
+psutil # For system resource monitoring (memory/CPU)
+
+httpx
+pytest
+python-multipart
